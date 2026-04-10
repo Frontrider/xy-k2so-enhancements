@@ -55,9 +55,7 @@ if mods['science-tab'] then
         'hydraulic-research-data',
         'kr-cryogenic-research-data',
         'kr-matter-research-data',
-        'xy-galvanization-research-data',
-        'xy-particle-physics-research-data',
-        'xy-golden-research-data',
+        'xy-particle-physics-research-data',        
         'xy-gas-manipulation-research-data',
         'kr-promethium-research-data',
     }
@@ -94,12 +92,14 @@ if mods['science-tab'] then
         'kr-singularity-tech-card',
         'particle-physics-pack',
         'gas-manipulation-science-pack',
-
         'promethium-science-pack', -- Always last (unless something adds post-promethium)
     }
+    -- the outer rim brings its own compat for this.
     if not mods["outer-rim"] then
         table.insert(order_tech_card_3, 5, 'galvanization-science-pack')
         table.insert(order_tech_card_3, 7, 'golden-science-pack')
+        table.insert(order_research_data,16,'xy-galvanization-research-data')
+        table.insert(order_research_data,18,'xy-golden-research-data')
     end
     local order_special_science = {
         'kr-space-research-data-advanced',
